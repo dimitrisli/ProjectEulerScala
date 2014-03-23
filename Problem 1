@@ -5,3 +5,6 @@
 
 //Solution 2
 ( for{ i<-1 until 1000 if(i%3==0 || i%5==0) } yield i ) sum
+
+//Solution 3 - nonefficient
+(0 until 1000 by 3).sum + (0 until 1000 by 5).sum - (0 until 1000 by 5*3).sum
