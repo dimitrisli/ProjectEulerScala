@@ -1,0 +1,1 @@
+(for(x <- 100 to 999;y <- 100 to 999;s = "" + x*y;if s == s.reverse) yield x*y).max  
