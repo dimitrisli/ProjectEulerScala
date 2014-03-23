@@ -6,5 +6,8 @@
 //Solution 2
 ( for{ i<-1 until 1000 if(i%3==0 || i%5==0) } yield i ) sum
 
-//Solution 3 - nonefficient
+//Solution 3
+Stream.from(0).filter{ x=> x%3==0||x%5==0 }.takeWhile(_<1000).sum
+
+//Solution 4 - inefficient
 (0 until 1000 by 3).sum + (0 until 1000 by 5).sum - (0 until 1000 by 5*3).sum
